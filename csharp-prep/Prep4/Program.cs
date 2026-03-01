@@ -37,8 +37,18 @@ class Program
         double avg = numbers.Average();
         Console.WriteLine($"The average is: {avg}");
 
-        // //Compute Max
+        //Compute Max
         int max = numbers.Max();
         Console.WriteLine($"The largest number is: {max}");
+
+        //Sorted List
+        //Small -> large
+        numbers.Sort();
+
+        Console.WriteLine("The sorted list is: ");
+        foreach (int smallBig in numbers)
+        {
+            Console.WriteLine(smallBig);
+        }
     }
 }
