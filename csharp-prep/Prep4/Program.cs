@@ -34,9 +34,11 @@ class Program
         Console.WriteLine($"The sum is: {total}");
 
         //Compute Average
-        // Console.WriteLine($"The average is: {avg}");
+        double avg = numbers.Average();
+        Console.WriteLine($"The average is: {avg}");
 
         // //Compute Max
-        // Console.WriteLine($"The largest number is: {max}");
+        int max = numbers.Max();
+        Console.WriteLine($"The largest number is: {max}");
     }
 }
