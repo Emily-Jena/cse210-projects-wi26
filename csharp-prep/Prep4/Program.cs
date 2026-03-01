@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Formats.Asn1;
 using System.Globalization;
 using System.Runtime.CompilerServices;
+using System.Linq;
 
 class Program
 {
@@ -20,17 +21,22 @@ class Program
         while (number != 0)
         {
             Console.Write("Enter Number: ");
-             number = int.Parse(Console.ReadLine());
-        }
-
+            number = int.Parse(Console.ReadLine());
+        
+        // Add the numbers to the list
         if (number != 0)
         {
             numbers.Add(number);          
         }
+        }
         // Compute Sum
-        
-        //Compute Average
+        int total = numbers.Sum();
+        Console.WriteLine($"The sum is: {total}");
 
-        //Compute Max
+        //Compute Average
+        // Console.WriteLine($"The average is: {avg}");
+
+        // //Compute Max
+        // Console.WriteLine($"The largest number is: {max}");
     }
 }
