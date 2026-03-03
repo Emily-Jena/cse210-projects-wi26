@@ -26,6 +26,7 @@ class Program{
         myResume._jobs = new List<Job>();
         myResume._jobs.Add(myFirstJob);
         myResume._jobs.Add(mySecondJob);
+        myResume.DisplayResume();
 }  
 }
     
