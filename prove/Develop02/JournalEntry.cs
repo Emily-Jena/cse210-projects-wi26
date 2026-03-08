@@ -4,6 +4,8 @@ class JournalEntry
     public string _response;
     public string _prompt;
 
+    public JournalEntry(){}
+
     public JournalEntry(string date, string response, string prompt)
     {
         
