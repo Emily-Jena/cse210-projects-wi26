@@ -45,7 +45,7 @@ class Fraction
         }
     }
 
-    public string GetFraction()
+    public string GetFractionString()
     {
         string word = $"{_top}/{_bottom}";
         return word;
