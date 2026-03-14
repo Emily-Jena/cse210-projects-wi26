@@ -8,6 +8,7 @@ class Program
         // int  topNumber = number.GetTop();
         // Console.WriteLine($"{topNumber}");
         
+        //Step 6
         Fraction number1 = new Fraction();
         Console.WriteLine(number1.GetFractionString());
         Console.WriteLine(number1.GetDecimalValue());
@@ -24,6 +25,7 @@ class Program
         Console.WriteLine(number4.GetFractionString());
         Console.WriteLine(number4.GetDecimalValue());
 
+        //Step 7
         Random random = new Random();
         Fraction number5 = new Fraction();
         for (int i = 0; i < 0; i++)
