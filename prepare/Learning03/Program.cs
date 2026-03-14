@@ -7,7 +7,7 @@ class Program
         // number.SetTop();
         // int  topNumber = number.GetTop();
         // Console.WriteLine($"{topNumber}");
-        
+
         //Step 6
         Fraction number1 = new Fraction();
         Console.WriteLine(number1.GetFractionString());
@@ -30,8 +30,8 @@ class Program
         Fraction number5 = new Fraction();
         for (int i = 0; i < 0; i++)
         {
-            int topNumber = random.Next(1,11);
-            int bottomNumber = random.Next(1,11);
+            int topNumber = random.Next(1,20);
+            int bottomNumber = random.Next(1,20);
 
             number5.SetTop(topNumber);
             number5.SetBottom(bottomNumber);
