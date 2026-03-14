@@ -38,7 +38,7 @@ class Program
 
             Console.Write($"Fraction {i + 1} | ");
             Console.Write($"String:  {number5.GetFractionString()} | ");
-            Console.WriteLine($"Number: {number5.GetDecimalValue.()}");
+            Console.WriteLine($"Number: {number5.GetDecimalValue()}");
         }
     }
 }
