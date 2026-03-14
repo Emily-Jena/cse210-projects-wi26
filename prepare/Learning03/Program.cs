@@ -4,6 +4,13 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Learning03 World!");
+        Fraction number = new Fraction();
+        number.SetTop(5);
+
+        int  topNumber = number.GetTop();
+
+        Console.WriteLine($"{topNumber}");
+
+        
     }
 }

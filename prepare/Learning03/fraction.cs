@@ -6,18 +6,18 @@ class Fraction
     public Fraction()
     {
         _top = 1;
-        _bottom = 2;
+        _bottom = 1;
     }
 
     public Fraction(int wholeNumber)
     {
         _top = wholeNumber;
-        _bottom = 4;
+        _bottom = 1;
     }
     public Fraction(int top, int bottom)
     {
         _top = top;
-        _bottom = bottom;
+       SetBottom(bottom);
     }
 
     public int GetTop()
@@ -35,6 +35,24 @@ class Fraction
     }
     public void SetBottom(int bottom)
     {
-       _bottom = bottom; 
+       if (bottom != 0)
+        {
+            _bottom = bottom; 
+        }
+       else
+        {
+            _bottom = 1;
+        }
+    }
+
+    public string GetFraction()
+    {
+        string word = $"{_top}/{_bottom}";
+        return word;
+    }
+
+    public double GetDecimalValue()
+    {
+        return (double)_top / (double)_bottom;
     }
 }
