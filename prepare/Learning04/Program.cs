@@ -8,6 +8,7 @@ class Program
         Assignment testAssignment = new Assignment("Samuel Bennett" , "multiplication");
 
         string summary = testAssignment.GetSummary();
+
         Console.WriteLine(summary);
     }
 }
