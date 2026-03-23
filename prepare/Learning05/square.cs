@@ -1,8 +1,9 @@
 public class Square : Shape
 {
-    // Member variable & constructor
+    // Member variable & constructor & add base
+    
     private double _side;
-    public Square(string color, double side)
+    public Square(string color, double side) : base(color)
     {
         _side = side;
     }

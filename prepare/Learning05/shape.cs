@@ -1,4 +1,4 @@
-class Shape
+public class Shape
 {
     // class member variable & constructor
     private string _color;
