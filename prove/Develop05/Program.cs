@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Goal menu = new Goal();
+        Goals menu = new Goals();
         menu.Start();
 
     }
