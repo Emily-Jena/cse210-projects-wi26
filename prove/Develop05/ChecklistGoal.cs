@@ -31,4 +31,9 @@ public class ChecklistGoal : Goal
     {
         return $"ChecklistGoal: {_name}, {_description}, {_points}, {_bonus}, {_target}, {_amountCompleted}";
     }
+
+    public void SetAmountCompleted(int currentCount)
+    {
+        _amountCompleted = currentCount;
+    }
 }
