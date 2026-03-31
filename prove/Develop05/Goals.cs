@@ -112,47 +112,30 @@ public void ListGoalDetails()
     {
         ListGoalDetails();
         Console.Write("Which goal did you accomplish? ");
-        //int index = int.Parse(Console.ReadLine()) - 1;
+        int index = int.Parse(Console.ReadLine()) - 1;
 
-    //    Goal goal = _goals[index];
+       Goal goal = _goals[index];
 
-    //     int pointsEarned = _goals[index].RecordEvent();
+        int pointsEarned = _goals[index].RecordEvent();
 
-    //     if (goal is ChecklistGoal checklist && !checklist.IsComplete())
-    //     {
-    //         goal.RecordEvent();
-    //         if (checklist.IsComplete())
-    //         {
-    //             pointsEarned += checklist.GetBonus();
-    //         }
-        
-    //         else
-    //         {
-    //             goal.RecordEvent();
-    //         }
-        
-
-    //     _score += pointsEarned;
-    //     Console.WriteLine($"Congratulations! You earned {pointsEarned} points!");
-
-if (int.TryParse(Console.ReadLine(), out int choice))
-    {
-        int index = choice - 1;
-
-        if (index >= 0 && index < _goals.Count)
+        if (goal is ChecklistGoal checklist && !checklist.IsComplete())
         {
-            int pointsEarned = _goals[index].RecordEvent();
-            _score += pointsEarned;
-            Console.WriteLine($"Congratulations! You earned {pointsEarned} points!");
+            goal.RecordEvent();
+            if (checklist.IsComplete())
+            {
+                pointsEarned += checklist.GetBonus();
+            }
+        
+            else
+            {
+                goal.RecordEvent();
+            }
+        
+
+        _score += pointsEarned;
+        Console.WriteLine($"Congratulations! You earned {pointsEarned} points!");
         }
-        else
-        {
-            Console.WriteLine("Invalid goal number.");
-        }}
-
-    }
-
-    
+    }    
 
     public void SaveGoals()
     {
