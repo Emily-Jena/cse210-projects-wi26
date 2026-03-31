@@ -18,6 +18,10 @@ public class ChecklistGoal : Goal
     public override int RecordEvent()
     {
         _amountCompleted++;
+        if (_amountCompleted == _target)
+        {
+            return _points + _points;
+        }
         return _points;
     }
     public override bool IsComplete()

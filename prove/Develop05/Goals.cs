@@ -16,6 +16,7 @@ public class Goals
 
     public void Start()
     {
+        Console.Clear();
         string choice = "";
         while (choice != "6")
         {
@@ -134,6 +135,7 @@ public void ListGoalDetails()
 
         _score += pointsEarned;
         Console.WriteLine($"Congratulations! You earned {pointsEarned} points!");
+        Console.WriteLine($"Your score is now: {_score}");
         }
     }    
 
