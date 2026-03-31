@@ -8,7 +8,6 @@ public class EternalGoal : Goal
     // Never Complete
     public override int RecordEvent()
     {
-        
         return _points;
     }
 
