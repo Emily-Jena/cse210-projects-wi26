@@ -13,7 +13,7 @@ public abstract class Goal
         _points = points;
     }
 // abstract methods
-    public abstract void RecordEvent();
+    public abstract int RecordEvent();
 
     // See if goal is done
     public abstract bool IsComplete();

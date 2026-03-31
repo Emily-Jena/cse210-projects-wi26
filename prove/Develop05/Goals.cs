@@ -116,7 +116,7 @@ public void ListGoalDetails()
 
        Goal goal = _goals[index];
 
-        int pointsEarned = _goals[index].RecordEvent();
+        int pointsEarned =  _goals[index].RecordEvent();
 
         if (goal is ChecklistGoal checklist && !checklist.IsComplete())
         {

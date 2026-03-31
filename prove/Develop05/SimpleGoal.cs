@@ -8,9 +8,10 @@ public class SimpleGoal : Goal
     }
 
     // Mark and add points
-    public override void RecordEvent()
+    public override int RecordEvent()
     {
         _isComplete = true;
+        return _points;
     }
 
     // Show complete symbol
