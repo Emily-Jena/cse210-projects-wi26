@@ -13,14 +13,7 @@ public class BreathingActivity : Activity
         DateTime startTime = DateTime.Now;
         DateTime endtime = startTime.AddSeconds(_duration);
 
-        // Process activity
-
-        
-        // int cycleTime = 10;
-        // int totalCycles = _duration / cycleTime;
-
-        // for (int i = 0; i < totalCycles; i++)
-        // {
+        // Process activity 
         while (DateTime.Now < endtime)
         {
             Console.WriteLine();
