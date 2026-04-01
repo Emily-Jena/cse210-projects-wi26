@@ -9,17 +9,25 @@ public class Activity
     {
         _name = name;
         _description = description;
-    }
+    }  
 
     public void DisplayStartingMessage()
     {
         Console.Clear();
         Console.WriteLine($"Welcome to the {_name}.");
         Console.WriteLine($"{_description}");
+        Console.Write("How long in seconds, would you like for your session?");
+
+        _duration = int.Parse(Console.ReadLine());
+        Console.Clear();
+        Console.WriteLine($"Get Ready...");
+        ShowSpinner(5);
+        
     }
 
     public void DisplayEndingMessage()
     {
+        Console.WriteLine();
         Console.WriteLine($"Well done");
         ShowSpinner(3);
 
@@ -29,7 +37,25 @@ public class Activity
 
     public void ShowSpinner(int seconds)
     {
-        
+        List<string> animationStrings = new List<string> {"|", "/", "-", "\\"};
+
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(seconds);
+
+        int i = 0;
+        while (DateTime.Now < endTime)
+        {
+            string anim = animationStrings[i];
+            Console.Write(anim);
+            Thread.Sleep(300);
+            Console.Write("\b \b"); //removes character
+
+            i++;
+            if (i >= animationStrings.Count)
+            {
+                i = 0;
+            }
+        }
     }
 
     public void ShowCountDown(int seconds)
