@@ -3,30 +3,30 @@ using System;
 class Program
 {
     static void Main(string[] args)
-    {
+    { 
         bool running = true;
-        while (running)
+        while (running) 
         {
             Console.Clear();
-            Console.Write("Select a choice from the menu.");
             Console.WriteLine("Menu Options: ");
             Console.WriteLine("1. Begin Breathing Activity");
             Console.WriteLine("2. Begin Reflecting Activity");
             Console.WriteLine("3. Begin Listing Activity ");
             Console.WriteLine("4. Quit");
+            Console.Write("Select a choice from the menu: ");
             
             string option = Console.ReadLine();
 
             switch (option)
             {
                 case "1":
-                    BreathingActivity = new BreathingActivity();
+                    BreathingActivity breathing = new BreathingActivity();
                     breathing.Run();
                 break;
 
                 case "2":
-                    ReflectionActivity = new ReflectionActivity();
-                    ReflectionActivity.Run();
+                    ReflectionActivity reflection = new ReflectionActivity();
+                    reflection.Run();
                 break;
 
                 case "3":
