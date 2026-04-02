@@ -37,9 +37,9 @@ public class ReflectionActivity : Activity
     {
         int index = _random.Next(_questions.Count);
         return _questions[index];
-    }
+    } 
 
-    public void ReflectionActivity.Run()
+    public void Run()
     {
         DisplayStartingMessage();
 
@@ -48,10 +48,10 @@ public class ReflectionActivity : Activity
         Console.WriteLine($"\n Press enter to continue, when you have something in mind.");
         Console.ReadLine();
 
-        Console.Clear();
         Console.WriteLine("Now Ponder the following questions");
         ShowCountDown(5);
-        Console.Clear();
+        
+        
 
         DateTime endTime = DateTime.Now.AddSeconds(_duration);
 
