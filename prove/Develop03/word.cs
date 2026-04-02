@@ -1,27 +1,24 @@
-class Word
+public class Word
 {
-    private string _word;
+    private string _text;
     private bool _hidden;
 
-    public Word(string word)
+    public Word(string text)
     {
-        _word = word;
+        _text = text;
         _hidden = false;
     }
 
-    public string GetwordString()
-    { if (!_hidden)
+    public string GetDisplaytext()
+    { 
+        if (_hidden)
         {
-        return _word;
+        return new string('_',_text.Length); //Underscore with same length
         }
         else
         {
-            string tempString = " ";
-            foreach (char c in _word)
-            {
-                tempString += '_';
-            }
-            return tempString;
+            
+            return _text;
         }
     }
 
