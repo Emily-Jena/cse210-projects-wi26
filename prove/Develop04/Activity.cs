@@ -15,20 +15,23 @@ public class Activity
     {
         Console.Clear();
         Console.WriteLine($"Welcome to the {_name}.");
+        Console.WriteLine();
         Console.WriteLine($"{_description}");
-        Console.Write("How long in seconds, would you like for your session?");
+        Console.WriteLine();
+        Console.Write("How long in seconds, would you like for your session? ");
 
         _duration = int.Parse(Console.ReadLine());
         Console.Clear();
-        Console.WriteLine($"Get Ready...");
+        Console.WriteLine($"Get Ready... ");
         ShowSpinner(5);
         
     }
 
     public void DisplayEndingMessage()
     {
+        Console.Clear();
         Console.WriteLine();
-        Console.WriteLine($"Well done");
+        Console.WriteLine($"Well done!!!");
         ShowSpinner(3);
 
         Console.WriteLine($"You have completed {_duration} seconds of the {_name}.");
@@ -47,7 +50,7 @@ public class Activity
         {
             string anim = animationStrings[i];
             Console.Write(anim);
-            Thread.Sleep(300);
+            Thread.Sleep(200);
             Console.Write("\b \b"); //removes character
 
             i++;
@@ -67,8 +70,5 @@ public class Activity
             Console.Write("\b \b");
         }
     }
-    public void Run()
-    {
-        
-    }
+    
 }
