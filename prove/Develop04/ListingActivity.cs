@@ -5,7 +5,7 @@ class ListingActivity : Activity
     private Random _random;
 
     public ListingActivity() : base("Listing Activity", "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.")
-    {
+    { 
         _random = new Random();
         _prompts = new List<string>
         {
@@ -33,7 +33,33 @@ class ListingActivity : Activity
             Console.Write("> ");
             string  input = Console.ReadLine();
 
+            if (!string.IsNullOrEmpty(input))
+            {
+                items.Add(input);
+            }
+
         }
         return items;
+    }
+
+    public void Run()
+    {
+        DisplayStartingMessage();
+
+        Console.WriteLine();
+        Console.Clear();
+        Console.WriteLine("List as many responses as you can to the following prompt: ");
+        Console.WriteLine($" --- {GetRandomPrompt()} --- ");
+        Console.WriteLine();
+        Console.WriteLine("You may begin in: ");
+        ShowCountDown(5);
+        Console.WriteLine();
+
+        List<string> userList = GetListFromUser();
+        _count = userList.Count;
+
+        Console.WriteLine($"You listed {_count} items!");
+
+        DisplayEndingMessage ();
     }
 }
