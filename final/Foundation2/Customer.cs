@@ -8,7 +8,7 @@ public class Customer
         
     }
 
-    public bool IsUSACompany()
+    public bool StayInUSA()
     {
         
     }

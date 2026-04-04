@@ -15,7 +15,7 @@ public class Address
         
     }
 
-    public bool IsUSACompany()
+    public bool StayInUSA()
     {
         
     }
