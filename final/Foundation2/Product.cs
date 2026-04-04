@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 public class Product
 {
     private string _name;
@@ -7,22 +9,25 @@ public class Product
     
     public Product(string name, string productId, double price, int quantity)
     {
-        
+        _name = name;
+        _productId = productId;
+        _price = price;
+        _quantity = quantity;
     }
 
 
     public string GetName()
     {
-        
+        return _name;
     }
 
     public string GetProductId()
     {
-        
+        return _productId;
     } 
-    
-    public double GetTotalCost()
+
+    public double GetTotalCost()   
     {
-        
+        return _price * _quantity;
     }
 }
