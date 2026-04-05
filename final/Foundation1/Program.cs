@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Foundation1 World!");
+        Console.WriteLine("Youtube Comment Tracker!");
 
         List<Video> videos = new List<Video>();
 
@@ -34,7 +34,7 @@ class Program
         //Display All Videos
         foreach (Video vid in videos)
         {
-            Console.Clear();
+            
             Console.WriteLine("----------------------------------------------");
             Console.WriteLine($"Title: {vid.GetTitle()}");
             Console.WriteLine($"Author: {vid.GetAuthor()}");

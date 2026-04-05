@@ -7,22 +7,24 @@ public class Video
 
     public Video(string title, string author, int length)
     {
-        
+        _title = title;
+        _author = author;
+        _length = length;
     }
 
     public void AddComment(Comment comment)
     {
-        
+        _comments.Add(comment);
     }
     
     public int GetCommentCount()
     {
-        
+        return _comments.Count;
     }
 
     public List<Comment> GetComments()
     {
-        
+        return _comments;
     }
 
     // Getters
