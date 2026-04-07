@@ -14,5 +14,5 @@ public class Lectures : Event
     public override string GetFullDetails()
     {
         return $"{GetStandardDetails()} \n Type: Lecture \n Speaker: {_speaker} \n Capacity: {_capacity}";
-    }
+    } 
 }
