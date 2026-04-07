@@ -1,7 +1,7 @@
 public abstract class Activity
 {
-    private string _date;
-    private int _minutes;
+    protected string _date;
+    protected int _minutes;
 
     public Activity(string date, int minutes)
     {
@@ -9,9 +9,9 @@ public abstract class Activity
         _minutes = minutes;
     }
 
+// virtual methods to override
     public int GetMinutes() => _minutes;
 
-    // virtual methods to override
     public virtual double GetDistance() => 0;
     public virtual double GetSpeed() => 0;
     public virtual double GetPace() => 0;
