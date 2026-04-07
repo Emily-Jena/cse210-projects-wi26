@@ -16,9 +16,9 @@ public abstract class Activity
     public virtual double GetSpeed() => 0;
     public virtual double GetPace() => 0;
 
-    public string GetSummary()
+    public string GetSummary() 
     {
-        return $"{_date} - {GetType().Name} ({_minutes} min): " + $"Distance - {GetDistance(): 0.0}, Speed - {GetSpeed(): 0.0}, Pace - {GetPace(): 0.0}";
+        return $"{_date} - {GetType().Name} ({_minutes} min): " + $"Distance {GetDistance(): 0.0}, | Speed {GetSpeed(): 0.0}, | Pace{GetPace(): 0.0}";
 
     }
 }
