@@ -9,6 +9,6 @@ public class Outdoor : Event
 
     public override string GetFullDetails()
     {
-       
-    }
+       return $"{GetStandardDetails()} \nType: Outdoor Gathering \nForecast: {_weather}";
+    } 
 }
