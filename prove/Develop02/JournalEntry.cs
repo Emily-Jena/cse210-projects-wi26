@@ -1,4 +1,4 @@
-class JournalEntry
+public class JournalEntry
 {
     public string _date;
     public string _response;
@@ -18,5 +18,5 @@ class JournalEntry
     {
         Console.WriteLine($"Date: {_date} - Prompt: {_prompt}");
         Console.WriteLine($"{_response}");
-    }
+    } 
 }
