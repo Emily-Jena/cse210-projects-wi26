@@ -9,6 +9,7 @@ class Program
     //Instance created & main program loop starts
     Journal myJournal = new Journal();
     Menu mainMenu = new Menu();
+    PromptGenerator promptGenerator = new PromptGenerator();
     bool running = true;
 
     while (running)
@@ -26,13 +27,13 @@ class Program
         
         case "1":
         string date = DateTime.Now.ToShortDateString();
-                string prompt = "What was the best part of my day?"; 
+                string prompt = promptGenerator.GetRandomPrompt(); 
                 Console.WriteLine($"\n{prompt}");
                 string response = Console.ReadLine();
                 
                 myJournal.AddEntry(new JournalEntry(date, prompt, response));
         break;
-
+        
         case "2":
             myJournal.DisplayEntries();
         break;
