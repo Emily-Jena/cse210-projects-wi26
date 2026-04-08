@@ -4,6 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        Console.Clear();
         Console.WriteLine("Welcome to the Event Planning Program!");
 
         Address address1 = new Address("90 Park St", "Rexburg", "ID", "83440");
@@ -16,19 +17,63 @@ class Program
 
         List<Event> events = new List<Event> {lecture, reception, outdoor};
 
-        foreach (Event even in events)
+        bool running = true;
+        while (running)
         {
+    
+            Console.WriteLine("");
+            Console.WriteLine("Marketing Events Options");
+            Console.WriteLine("");
+            Console.WriteLine("1. Lecture");
+            Console.WriteLine("2. Reception");
+            Console.WriteLine("3. Outdoor");
+            Console.WriteLine("4. Exit");
+            Console.WriteLine("");
+            Console.Write("Select an event to view the marketing details: ");
+
+            string choice = Console.ReadLine();
+            Event selectedEvent = null;
+
+            switch (choice)
+            {
+                case "1":
+                Console.Clear();
+                selectedEvent = events[0];
+                break;
+                case "2":
+                Console.Clear();
+                selectedEvent = events[1];
+                break;
+                case "3":
+                Console.Clear();
+                selectedEvent = events[2];
+                break;
+                case "4":
+                Console.Clear();
+                running = false;
+                continue;
+                default:
+                Console.WriteLine("You must have pressed a wrong number. Try again!");
+                Console.ReadLine();
+                continue;
+
+            }
+        
+
+        if (selectedEvent != null)
+        {
+            Console.Clear();
             Console.WriteLine("=========================================");
 
-            Console.WriteLine($"Standard Details: \n{even.GetStandardDetails()}");
+            Console.WriteLine($"Standard Details: \n{selectedEvent.GetStandardDetails()}");
             Console.WriteLine("");
 
-            Console.WriteLine($"Full Details: \n{even.GetFullDetails()}");
+            Console.WriteLine($"Full Details: \n{selectedEvent.GetFullDetails()}");
             Console.WriteLine("");
 
-            Console.WriteLine($"Short Description: \n{even.GetShortDescription()}");
+            Console.WriteLine($"Short Description: \n{selectedEvent.GetShortDescription()}");
             Console.WriteLine("=========================================");
-
+        }
 
         }
     }
