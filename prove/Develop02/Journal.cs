@@ -21,10 +21,15 @@ public class Journal
         {
             foreach (JournalEntry entry in _entries)
             {
+                string cleanPrompt = $"\"{entry._prompt.Replace("\"", "\"\"")}\"";
+                string cleanResponse = $"\"{entry._response.Replace("\"", "\"\"")}\"";
+
                outputFile.WriteLine($"{entry._date}|{entry._prompt}|{entry._response}"); 
             }
         }
+        Console.WriteLine("This has been successfully saved!");
     }
+
 
     public void LoadFromFile(string filename)
     {
@@ -33,10 +38,22 @@ public class Journal
         foreach (string line in lines)
         {
             string[] parts = line.Split('|');
+
+            if (parts.Length == 3)
+            {
+                string date = parts[0];
+                string prompt = parts[1];
+                string response = parts[2];
+                
             
-            JournalEntry newEntry = new JournalEntry(parts[0], parts[1], parts[2]);
-            _entries.Add(newEntry);
+                JournalEntry newEntry = new JournalEntry(date, prompt, response);
+
+                _entries.Add(newEntry);
+            }
         }
+        Console.WriteLine("Loaded...!");
 
     }
+
+
 }

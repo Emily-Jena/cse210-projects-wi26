@@ -4,20 +4,20 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Welcome to My Journal!");
-    
+    Console.WriteLine("Welcome to My Journal!");
 
+    //Instance created & main program loop starts
     Journal myJournal = new Journal();
     bool running = true;
 
     while (running)
     {
-        Console.WriteLine("Please select one of the following choices:");
+
         Console.WriteLine("1. Write\n2. Display\n3. Load\n4. Save\n5. Quit");
+        Console.WriteLine();
+        Console.Write("Please select one of the following choices: ");
         string choice = Console.ReadLine();
-
-    }
-
+    
     switch (choice)
     {
         
@@ -53,6 +53,7 @@ class Program
         default:
         Console.WriteLine("You entered a wrong number. Please try again.");
         break;
+    }
     }
 
    }
