@@ -6,7 +6,8 @@ public class JournalEntry
 
     public JournalEntry(){}
 
-    public JournalEntry(string date, string prompt, string response)
+    public JournalEntry(string date, string prompt, string response
+    )
     {
         
         _date = date;
