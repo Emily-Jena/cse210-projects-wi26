@@ -1,7 +1,7 @@
 using System.Runtime.CompilerServices;
 
 public abstract class Goal
-{
+{ 
     protected string _name;
     protected string _description;
     protected int _points;

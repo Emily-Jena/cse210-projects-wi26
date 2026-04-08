@@ -20,10 +20,16 @@ public class SimpleGoal : Goal
         return _isComplete;
     }
 
+    public override string GetDetailsString()
+    {
+        string statusSymbol = IsComplete() ? "[X]" : "[ ]";
+        return $"{statusSymbol} {_name} ({_description})";
+    }
+
     // Save/load format
     public override string GetStringRepresentation()
     {
         return $"SimpleGoal: {_name}, {_description}, {_points}, {_isComplete} ";
     }
-
+ 
 }

@@ -2,7 +2,7 @@ public class EternalGoal : Goal
 {
     public EternalGoal(string name, string description, int points) : base(name, description, points)
     {
-        
+         
     }
 
     // Never Complete
@@ -19,5 +19,11 @@ public class EternalGoal : Goal
     public override string GetStringRepresentation()
     {
         return $"EternalGoal: {_name}, {_description}, {_points}";
+    }
+
+    public override string GetDetailsString()
+    {
+        string statusSymbol = IsComplete() ? "[X]" : "[ ]";
+        return $"{statusSymbol} {_name} ({_description})";
     }
 }

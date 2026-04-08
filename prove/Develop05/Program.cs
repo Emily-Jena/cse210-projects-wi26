@@ -7,6 +7,6 @@ class Program
     {
         Console.Clear();
         Goals menu = new Goals();
-        menu.Start();
+        menu.Start(); 
     }
 }

@@ -4,7 +4,6 @@ using System.IO;
 
 public class Goals
 {
-
     private List<Goal> _goals;
     private int _score;
 
@@ -115,29 +114,22 @@ public void ListGoalDetails()
         Console.Write("Which goal did you accomplish? ");
         int index = int.Parse(Console.ReadLine()) - 1;
 
-       Goal goal = _goals[index];
-
-        int pointsEarned =  _goals[index].RecordEvent();
-
-        if (goal is ChecklistGoal checklist && !checklist.IsComplete())
+        if (index >= 0 && index < _goals.Count)
         {
-            goal.RecordEvent();
-            if (checklist.IsComplete())
-            {
-                pointsEarned += checklist.GetBonus();
-            }
-        
-            else
-            {
-                goal.RecordEvent();
-            }
-        
-
-        _score += pointsEarned;
-        Console.WriteLine($"Congratulations! You earned {pointsEarned} points!");
-        Console.WriteLine($"Your score is now: {_score}");
+            int pointsEarned = _goals[index].RecordEvent();
+            _score += pointsEarned; //total score update
+            
+            Console.WriteLine($"Congratulations! You earned {pointsEarned} points!");
+            Console.WriteLine($"Your score is now: {_score}");
         }
-    }    
+        else
+        {
+           Console.WriteLine($"There must be something wrong. Please try again!");
+        }
+        
+        
+    }
+    
 
     public void SaveGoals()
     {
@@ -206,5 +198,4 @@ public void ListGoalDetails()
             }  
         }
     }
-} 
-
+}
