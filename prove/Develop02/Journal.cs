@@ -1,3 +1,7 @@
+using System;
+using System.IO;
+using System.Collections.Generic;
+
 class Journal
 {
     public List<JournalEntry> _entries = new List<JournalEntry>();

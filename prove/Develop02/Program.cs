@@ -8,16 +8,19 @@ class Program
 
     //Instance created & main program loop starts
     Journal myJournal = new Journal();
+    Menu mainMenu = new Menu();
     bool running = true;
 
     while (running)
     {
-
-        Console.WriteLine("1. Write\n2. Display\n3. Load\n4. Save\n5. Quit");
+        mainMenu.DisplayMenu();
         Console.WriteLine();
-        Console.Write("Please select one of the following choices: ");
         string choice = Console.ReadLine();
-    
+        
+        // Console.WriteLine("1. Write\n2. Display\n3. Load\n4. Save\n5. Quit");
+        // Console.Write("Please select one of the following choices: ");
+        
+        
     switch (choice)
     {
         

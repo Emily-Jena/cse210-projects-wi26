@@ -13,7 +13,7 @@ public class Menu
         {
             Console.WriteLine($"{i + 1}. {_menuItems[i]}");
         }
-
-        Console.Write($"What do you want to do? ");
+        Console.WriteLine();
+        Console.Write($"Which do you want to do: ");
     }
 }
