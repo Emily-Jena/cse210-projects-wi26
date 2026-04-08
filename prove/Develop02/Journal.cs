@@ -1,4 +1,4 @@
-public class Journal
+class Journal
 {
     public List<JournalEntry> _entries = new List<JournalEntry>();
 
